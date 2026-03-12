@@ -1,0 +1,18 @@
+create database shoetec;
+use shoetec;
+create table clientes (id_cliente varchar(100) not null, direccion varchar(255) not null,
+email varchar(100)unique not null, telefono int not null, password varchar(255) not null);
+create table servicios (id_service bigint auto_increment primary key, descripcion varchar(255) not null,
+precio double not null);
+create table materiales (id_material bigint auto_increment primary key, nombre varchar(100) not null,
+stock_actual int not null, stock_minimo int not null);
+create table pedidos (id_pedido bigint auto_increment primary key, fecha_creacion datetime default current_timestamp,
+estado varchar(50) default 'pendiente', precio_total double, id_cliente bigint,
+foreign key (id_cliente) references clientes(id_cliente));
+create table logistica (id_logistica bigint auto_increment primary key, tracking_id varchar(50) unique,
+fecha_recogida date, fecha_entrega date, empresa_transporte varchar(100), id_pedido bigint unique,
+foreign key (id_pedido) references pedidos(id_pedido));
+create table pedido_servicios (id_pedido bigint, id_servicio bigint, primary key (id_pedido, id_servicio),
+foreign key (id_pedido) references pedidos(id_pedido), foreign key (id_material) references materiales(id_material));
+create table personal (id_personal bigint auto_increment primary key, nombre varchar(100) not null,
+rol varchar(50), especialidad varchar(100));
