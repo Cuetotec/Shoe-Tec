@@ -1,0 +1,33 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introduce tu Tracking ID de SHOE TEC"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_tracking_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ej: ST-17390045" />
+
+    <Button
+        android:id="@+id/btn_consultar_estado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consultar Estado"
+        android:backgroundTint="#2E7D32" /> <TextView
+        android:id="@+id/tv_estado_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
+
+</LinearLayout>
