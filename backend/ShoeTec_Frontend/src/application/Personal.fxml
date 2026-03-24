@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PersonalController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <Label text="GESTIÓN DEL EQUIPO DE TRABAJO" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+
+    <VBox spacing="10" style="-fx-background-color: #F9F4ED; -fx-border-color: #D2B48C; -fx-border-radius: 5; -fx-background-radius: 5;">
+        <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+        
+        <Label text="Añadir Nuevo Empleado" style="-fx-font-weight: bold; -fx-text-fill: #5D4037;"/>
+        
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints minWidth="80" prefWidth="100" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+
+            <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtNombre" promptText="Ej: Juan Pérez" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Rol:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtRol" promptText="Ej: Vendedor / Zapatero" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Especialidad:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtEspecialidad" promptText="Ej: Cuero / Reparación rápida" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            
+            <Button text="💾 Guardar Empleado" onAction="#guardarEmpleado" 
+                    GridPane.columnIndex="1" GridPane.rowIndex="3" 
+                    style="-fx-background-color: #8B4513; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        </GridPane>
+    </VBox>
+
+    <Separator />
+
+    <TableView fx:id="tablaPersonal" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50" />
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200" />
+            <TableColumn fx:id="colRol" text="Rol" prefWidth="150" />
+            <TableColumn fx:id="colEspecialidad" text="Especialidad" prefWidth="200" />
+        </columns>
+    </TableView>
+</VBox>

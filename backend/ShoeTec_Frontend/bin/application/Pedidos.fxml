@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PedidosController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <Label text="GESTIÓN DE PEDIDOS" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+    
+    <TableView fx:id="tablaPedidos" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="colId" text="ID Pedido" prefWidth="70" />
+            <TableColumn fx:id="colFecha" text="Fecha Creación" prefWidth="150" />
+            <TableColumn fx:id="colCliente" text="ID Cliente" prefWidth="80" />
+            <TableColumn fx:id="colEstado" text="Estado" prefWidth="120" />
+            <TableColumn fx:id="colPrecio" text="Total (€)" prefWidth="100" />
+        </columns>
+    </TableView>
+
+    <Button text="Refrescar Pedidos" onAction="#cargarPedidos" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;"/>
+</VBox>

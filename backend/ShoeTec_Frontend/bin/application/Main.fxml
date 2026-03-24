@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/fxml/1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+    
+    <left>
+        <VBox spacing="20" style="-fx-background-color: #F5F0E6; -fx-border-color: #D2B48C; -fx-border-width: 0 1 0 0;" prefWidth="140">
+            <padding><Insets top="20" left="10" right="10"/></padding>
+            
+            <Label text="SHOE TEC" style="-fx-font-family: 'Georgia'; -fx-font-size: 18; -fx-text-fill: #8B4513; -fx-font-weight: bold; -fx-padding: 0 0 10 0;" alignment="CENTER" maxWidth="Infinity"/>
+
+            <Button text="Inicio" onAction="#irInicio" contentDisplay="TOP" prefWidth="120" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-weight: bold;">
+                <graphic>
+                    <ImageView fitHeight="35" fitWidth="35" preserveRatio="true">
+                        <Image url="@resources/INICIO.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            
+            <Button text="Almacén" onAction="#abrirAlmacen" contentDisplay="TOP" prefWidth="120" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-weight: bold;">
+                <graphic>
+                    <ImageView fitHeight="35" fitWidth="35" preserveRatio="true">
+                        <Image url="@resources/ALMACEN.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            
+            <Button text="Pedidos" onAction="#abrirPedidos" contentDisplay="TOP" prefWidth="120" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-weight: bold;">
+                <graphic>
+                    <ImageView fitHeight="35" fitWidth="35" preserveRatio="true">
+                        <Image url="@resources/PEDIDOS.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button text="Clientes" onAction="#abrirClientes" contentDisplay="TOP" prefWidth="120" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-weight: bold;">
+                <graphic>
+                    <ImageView fitHeight="35" fitWidth="35" preserveRatio="true">
+                        <Image url="@resources/CLIENTES.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            
+            <Button text="Personal" onAction="#abrirPersonal" contentDisplay="TOP" prefWidth="120" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-weight: bold;">
+                <graphic>
+                    <ImageView fitHeight="35" fitWidth="35" preserveRatio="true">
+                        <Image url="@resources/PERSONAL.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+          
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: white;">
+            <VBox alignment="CENTER" spacing="15">
+                <padding>
+                <Insets top="20" bottom="20" left="20" right="20"/>
+            </padding>
+            
+            <ImageView fitHeight="450.0" preserveRatio="true">
+                <image>
+                    <Image url="@resources/FONDO.png" />
+                </image>
+            </ImageView>
+            </VBox>
+        </StackPane>
+    </center>
+    
+    <bottom>
+        <HBox spacing="20" alignment="CENTER_RIGHT" style="-fx-background-color: #F5F0E6; -fx-border-color: #D2B48C; -fx-border-width: 1 0 0 0;" prefHeight="50">
+            <padding><Insets right="20"/></padding>
+            <Label text="👤 Administrador Conectado" style="-fx-font-weight: bold; -fx-text-fill: #5D4037;"/>
+<Button text="Cerrar Sesión" onAction="#cerrarSesion" 
+                    style="-fx-background-color: #D2B48C; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>        </HBox>
+    </bottom>
+</BorderPane>

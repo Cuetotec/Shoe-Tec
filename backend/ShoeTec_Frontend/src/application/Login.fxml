@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #F5F0E6;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+    <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+
+    <ImageView fitHeight="100" preserveRatio="true">
+        <Image url="@resources/FONDO.png"/>
+    </ImageView>
+
+    <Label text="ACCESO AL SISTEMA" style="-fx-font-family: 'Georgia'; -fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+
+    <VBox spacing="10" maxWidth="250">
+        <TextField fx:id="txtUsuario" promptText="Usuario" style="-fx-background-radius: 5;"/>
+        <PasswordField fx:id="txtPassword" promptText="Contraseña" style="-fx-background-radius: 5;"/>
+    </VBox>
+
+    <Button text="Entrar" onAction="#handleLogin" prefWidth="250" 
+            style="-fx-background-color: #8B4513; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+    
+    <Label fx:id="lblMensaje" style="-fx-text-fill: red;"/>
+</VBox>

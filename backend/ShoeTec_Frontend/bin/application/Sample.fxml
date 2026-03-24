@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClientesController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <Label text="LISTADO DE CLIENTES" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    
+    <TableView fx:id="clientes" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50" />
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150" />
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="150" />
+            <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="200" />
+        </columns>
+    </TableView>
+    
+    <Button text="Cargar Datos" onAction="#handleCargarClientes" style="-fx-background-color: #2ecc71; -fx-text-fill: white;"/>
+</VBox>

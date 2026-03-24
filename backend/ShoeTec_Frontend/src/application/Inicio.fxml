@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:id="paneInicio" style="-fx-background-color: white;">
+    <VBox alignment="CENTER" spacing="10">
+        <padding>
+            <Insets top="20" bottom="20" left="20" right="20"/>
+        </padding>
+        
+        <ImageView fitHeight="500.0" preserveRatio="true">
+            <image>
+                <Image url="@resources/FONDO.png" />
+            </image>
+        </ImageView>
+    </VBox>
+</StackPane>
