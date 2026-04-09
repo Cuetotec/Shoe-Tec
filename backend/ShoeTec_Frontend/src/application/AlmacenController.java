@@ -101,8 +101,8 @@ public class AlmacenController {
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                 .thenApply(HttpResponse::body)
                 .thenAccept(json -> {
-                    List<Material> lista = new Gson().fromJson(json, new TypeToken<List<Material>>(){}.getType());
-                    
+                	List<Material> lista = new Gson().fromJson(json, new TypeToken<List<Material>>(){}.getType());
+                     
                     Platform.runLater(() -> {
                         if (lista != null) {
                             tablaMateriales.setItems(FXCollections.observableArrayList(lista));

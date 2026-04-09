@@ -14,6 +14,9 @@ public class Pedido {
     
 	@com.google.gson.annotations.SerializedName("id_cliente")
     private Integer idCliente;
+	
+	@com.google.gson.annotations.SerializedName("id_servicio")
+    private Integer idServicio;
     
     public Integer getId() {
 		return id;
@@ -45,5 +48,10 @@ public class Pedido {
 	public void setIdCliente(Integer idCliente) {
 		this.idCliente = idCliente;
 	}
-	
+	public Integer getIdServicio() {
+        return idServicio;
+    }
+    public void setIdServicio(Integer idServicio) {
+        this.idServicio = idServicio;
+    }
 }

@@ -7,11 +7,10 @@ public class Material {
 	private Integer id;
     private String nombre;
     private String proveedor;
-    @SerializedName("stock_actual")
     private Integer stockActual;
     @SerializedName("stock_minimo")
     private Integer stockMinimo;
-
+    
     // Constructores
     public Material() {}
 

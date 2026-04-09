@@ -12,10 +12,11 @@ public class Material {
 	
 	private String nombre;
 	private String proveedor;
-    private Integer stock_actual;
     private Integer stock_minimo;
-	
     
+    @Column(name = "stock_actual")
+    private Integer stockActual;
+	    
 	public Integer getId_material() {
 		return id_material;
 	}
@@ -34,17 +35,12 @@ public class Material {
 	public void setProveedor(String proveedor) {
 		this.proveedor = proveedor;
 	}
-	public Integer getStock_actual() {
-		return stock_actual;
-	}
-	public void setStock_actual(Integer stock_actual) {
-		this.stock_actual = stock_actual;
-	}
 	public Integer getStock_minimo() {
 		return stock_minimo;
 	}
 	public void setStock_minimo(Integer stock_minimo) {
 		this.stock_minimo = stock_minimo;
 	}
-	
+	public Integer getStockActual() { return stockActual; }
+	public void setStockActual(Integer stockActual) { this.stockActual = stockActual; }
 }

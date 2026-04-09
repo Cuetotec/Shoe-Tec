@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.shoetec.backend.entities.Cliente;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
+	Cliente findByEmail(String email);
 }
