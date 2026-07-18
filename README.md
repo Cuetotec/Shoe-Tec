@@ -27,11 +27,13 @@ El sistema sigue un modelo de arquitectura cliente-servidor basado en **REST API
 
 ## 📸 Demo
 - **Panel Administrativo (JavaFX):**
+  
   <img width="436" height="296" alt="image" src="https://github.com/user-attachments/assets/9b0dd8b8-1a4d-4e5b-b3a5-99a07a688f35" />
   <img width="431" height="292" alt="image" src="https://github.com/user-attachments/assets/5c49486d-ebfc-433a-a9e3-f062d457e861" />
 
 
 - **App Cliente (Android):**
+  
   <img width="262" height="507" alt="image" src="https://github.com/user-attachments/assets/dd27b807-9d93-4299-bb38-7b669b4d526c" />
   <img width="266" height="485" alt="image" src="https://github.com/user-attachments/assets/3238f1b6-a3ab-4af3-ad0f-a133de95a665" />
 
